@@ -2,6 +2,8 @@ describe('Форма логина Позитив', function () {
     
     it('Верный логин и пароль', function () {
         cy.visit('https://huntingpony.com/');
+        cy.wait(90)
+        cy.get('#carrotquest-messenger-body-big-cont > div.popup__controls > div > div.popup__close-button-text').click();
         cy.contains("Поводки").click();
         cy.get('body > div.page_layout.page_layout-clear.page_layout_section_top > main > div.layout.widget-type_system_widget_v4_catalog_2 > div > div > div > form:nth-child(1) > div > div.product-preview__area-title > div > a').click();
         cy.get('#product-detail-buy-area > div > div > button').click();
